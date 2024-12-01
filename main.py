@@ -1,13 +1,5 @@
-grid = [['.', '.', '.', '.', '.', '.'], ['.', 'O', 'O', '.', '.', '.'],
-        ['O', 'O', 'O', 'O', '.', '.'], ['O', 'O', 'O', 'O', 'O', '.'],
-        ['.', 'O', 'O', 'O', 'O', 'O'], ['O', 'O', 'O', 'O', 'O', '.'],
-        ['O', 'O', 'O', 'O', '.', '.'], ['.', 'O', 'O', '.', '.', '.'],
-        ['.', '.', '.', '.', '.', '.']]
+def isAnagram(word1, word2):
+  sortWord1 = sorted(word1) #sorts word1 into alphabethical order
+  sortWord2 = sorted(word2) # sorts word2 alphabet order
 
-for x in range(6):
-
-  for y in range(9):
-    if y != 8:
-      print(grid[y][x], end='')
-    else:
-      print(grid[8][x])
+  return sortWord1 == sortWord2 #checks if they are the same
